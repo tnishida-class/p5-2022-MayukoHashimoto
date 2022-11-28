@@ -12,5 +12,14 @@ function draw(){
   background(160, 192, 255);
   count = (count + 1) % cycle;
   // BLANK[1]
-  ellipse(width / 2, height / 2, size);
-}
+  let size = count
+  if(keyIsDown(ENTER)){
+    ellipse(width / 2, height / 2, size);
+    fill(255,0,0);
+    count = count*1.1
+  }
+  else{
+    ellipse(width / 2, height / 2, size);
+    fill(255,0,0);
+  }
+};
